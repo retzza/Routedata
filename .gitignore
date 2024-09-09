@@ -1,0 +1,5 @@
+# ignores all .json files in folder training_sessions
+/training_sessions/*.json
+
+# ignores all files starting with word training-session-
+training-session-*

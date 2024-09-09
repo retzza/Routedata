@@ -1,0 +1,22 @@
+
+#map {
+    height: 80vh;
+}
+
+ul li {
+    font-size: 16px;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}
+
+button {
+    margin: 2px;
+}
+
+h1 {
+    margin: 2px;
+    height: 3vh;
+}

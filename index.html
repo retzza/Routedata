@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routedata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-rsssl=1>
+
+    <h1>Routedata</h1>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+    <main>
+        <div id="map"></div>
+
+        <div id="statistics" style="width: 100%; overflow: hidden; margin-top: 5px; position: relative;">
+            <div style="width: 450px; float: left;">
+                <label>Upload training session files:</label>
+                <input type="file" id="fileInput" accept=".json" multiple><br>
+                <button id="uploadBtn">Upload</button><br><br>
+                <label>Choose training session types</label><br>
+
+                <form>
+                    <div class="training session types">
+                        <input type="checkbox" value="Walking" name="routes" checked>Walking: red<br>
+                        <input type="checkbox" value="Running" name="routes">Running: blue<br>
+                        <input type="checkbox" value="Cycling" name="routes">Cycling: green<br>
+                        <input type="checkbox" value="Other" name="routes">Other: purple<br>
+                    </div>
+                </form>
+
+                <button id="drawRoutesBtn">Show routes</button>
+                <button id="clearAll">Clear all</button>
+            </div>
+
+            <div style="width: 300px; margin-left: 10px; float: left;">
+                <label>Routes loaded:</label><br>
+                <table>
+                    <tr>
+                        <th style="width: 80px;"></th>
+                        <th style="width: 80px;">Quantity</th>
+                        <th style="width: 100px;">Total distance</th>
+                    </tr>
+                    <tr>
+                        <th>Walking</th>
+                        <th id="walkingRoutes">0</th>
+                        <th id="walkingDistance">0 km</th>
+                    </tr>
+                    <tr>
+                        <th>Running</th>
+                        <th id="runningRoutes">0</th>
+                        <th id="runningDistance">0 km</th>
+                    </tr>
+                    <tr>
+                        <th>Cycling</th>
+                        <th id="cyclingRoutes">0</th>
+                        <th id="cyclingDistance">0 km</th>
+                    </tr>
+                    <tr>
+                        <th>Other</th>
+                        <th id="otherRoutes">0</th>
+                        <th id="otherDistance">0 km</th>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th id="totalRoutes">0</th>
+                        <th id="totalDistance">0 km</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div style="width: 250px; margin-left: 10px; float: left;">
+                <label>Other sports:</label>
+                <ul id="otherSportsList"></ul>
+            </div>
+
+            <div style="width: 150px; margin-left: 10px; float: left;">
+                <label>First date:</label> <label id="firstDateLabel"></label><br>
+                <label>Last date:</label> <label id="lastDateLabel"></label><br>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="routedata.js"></script>
+
+    <footer>
+        <p>© Reetta Koskelo</p>
+    </footer>
+
+</body>
+
+</html>
