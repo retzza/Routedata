@@ -1,4 +1,3 @@
-
 #map {
     height: 80vh;
 }
@@ -14,9 +13,70 @@ th {
 
 button {
     margin: 2px;
+    width: fit-content;
 }
 
 h1 {
     margin: 2px;
     height: 3vh;
+}
+
+.sessionTypes {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.sessionTypes input {
+    float: right;
+}
+
+#clearAll {
+    background-color: rgb(255, 0, 0);
+}
+
+#statistics {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.firstColumn {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+#uploadBtn {
+    margin-bottom: 1em;
+    float: right;
+}
+
+#drawRoutesBtn {
+    clear: right;
+}
+
+#clearAll {
+    margin-left: 1em;
+}
+
+.secondColumn {
+    width: 300px;
+    margin-left: 10px;
+    float: left;
+}
+
+.thirdColumn {
+    width: 250px;
+    margin-left: 10px;
+    float: left;
+}
+
+.fourthColumn {
+    width: 150px;
+    margin-left: 10px;
+    float: left;
 }
