@@ -22,27 +22,37 @@
     <main>
         <div id="map"></div>
 
-        <div id="statistics" style="width: 100%; overflow: hidden; margin-top: 5px; position: relative;">
-            <div style="width: 450px; float: left;">
-                <label>Upload training session files:</label>
-                <input type="file" id="fileInput" accept=".json" multiple><br>
-                <button id="uploadBtn">Upload</button><br><br>
-                <label>Choose training session types</label><br>
+        <div id="statistics">
+            <div class="firstColumn">
+                <label>Upload training session files:
+                    <input type="file" id="fileInput" accept=".json" multiple>
+                </label>
+                <button id="uploadBtn">Upload</button>
 
                 <form>
-                    <div class="training session types">
-                        <input type="checkbox" value="Walking" name="routes" checked>Walking: red<br>
-                        <input type="checkbox" value="Running" name="routes">Running: blue<br>
-                        <input type="checkbox" value="Cycling" name="routes">Cycling: green<br>
-                        <input type="checkbox" value="Other" name="routes">Other: purple<br>
+                    <label>Show training session types</label>
+                    <div class="sessionTypes">
+                        <label> Walking: red
+                            <input type="checkbox" value="Walking" name="routes" checked>
+                        </label>
+                        <label> Running: blue
+                            <input type="checkbox" value="Running" name="routes">
+                        </label>
+                        <label> Cycling: green
+                            <input type="checkbox" value="Cycling" name="routes"> </label>
+                        <label> Other: purple
+                            <input type="checkbox" value="Other" name="routes">
+                        </label>
                     </div>
                 </form>
 
-                <button id="drawRoutesBtn">Show routes</button>
-                <button id="clearAll">Clear all</button>
+                <div class="buttons">
+                    <button id="drawRoutesBtn">Show routes</button>
+                    <button id="clearAll">Clear all</button>
+                </div>
             </div>
 
-            <div style="width: 300px; margin-left: 10px; float: left;">
+            <div class="secondColumn">
                 <label>Routes loaded:</label><br>
                 <table>
                     <tr>
@@ -78,12 +88,12 @@
                 </table>
             </div>
 
-            <div style="width: 250px; margin-left: 10px; float: left;">
+            <div class="thirdColumn">
                 <label>Other sports:</label>
                 <ul id="otherSportsList"></ul>
             </div>
 
-            <div style="width: 150px; margin-left: 10px; float: left;">
+            <div class="fourthColumn">
                 <label>First date:</label> <label id="firstDateLabel"></label><br>
                 <label>Last date:</label> <label id="lastDateLabel"></label><br>
             </div>
