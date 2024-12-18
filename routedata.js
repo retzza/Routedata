@@ -15,7 +15,6 @@ let cyclingDistance = 0;
 let otherDistance = 0;
 let totalDistance = 0;
 
-let types = {};
 let walkingSessionCoordinates = [];
 let runningSessionCoordinates = [];
 let cyclingSessionCoordinates = [];
@@ -48,7 +47,7 @@ uploadBtn.addEventListener('click', () => {
     // choose files
     const files = [];
     const arr = document.querySelector('input[type="file"]').files;
-    for (file of arr) {
+    for (let file of arr) {
         files.push(file);
     }
 
@@ -240,9 +239,11 @@ drawBtn.addEventListener('click', () => {
 /**
  * Eventlistener for button "Clear"
  */
-clearBtn.addEventListener('click', () => {
-    clearMap();
-    resetAll();
+clearBtn.addEventListener('click', (e) => {
+    if (window.confirm("Do you really want to clear all?")) {
+        clearMap();
+        resetAll();
+    }
 })
 
 
@@ -375,7 +376,6 @@ function resetAll() {
     otherDistance = 0;
     totalDistance = 0;
 
-    types = {};
     walkingSessionCoordinates = [];
     runningSessionCoordinates = [];
     cyclingSessionCoordinates = [];
